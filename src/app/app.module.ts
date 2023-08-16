@@ -7,6 +7,8 @@ import { HeaderComponent } from './header/header.component';
 import { SellerAuthComponent } from './seller-auth/seller-auth.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { SellerHomeComponent } from './seller-home/seller-home.component';
 
 @NgModule({
   declarations: [
@@ -14,12 +16,14 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     SellerAuthComponent,
     HomeComponent,
+    SellerHomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
