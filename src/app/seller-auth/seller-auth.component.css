@@ -1,0 +1,25 @@
+B{
+    font-size: small;
+}
+.myButton{
+    background-color: rgb(175, 44, 192);
+    color:white;
+    border: 1px solid rgb(175, 44, 192);
+}
+.myButton:focus{
+    border: 1px solid rgb(175, 44, 192);
+}
+a{
+    text-decoration: none;
+    color: rgb(175, 44, 192);
+}
+input.ng-invalid.ng-touched{
+    border: 1px solid rgb(201, 29, 29);
+}
+input.ng-valid.ng-touched{
+    border: 1px solid green;
+}
+.errMsg{
+    border: 1px solid rgb(201, 29, 29);
+    padding-left: 20px;
+}
