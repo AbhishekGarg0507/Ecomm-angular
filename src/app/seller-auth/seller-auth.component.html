@@ -6,7 +6,7 @@
         <h2 class="card-title mb-3">REGISTER SELLER</h2> 
         <div class="text-white bg-danger errMsg rounded my-3" *ngIf="!sellerForm.valid && sellerForm.touched">* is a required field</div>
           <!--  -->
-        <form (ngSubmit)="onSubmit()" #sellerForm="ngForm">
+        <form (ngSubmit)="onSubmit(sellerForm.value)" #sellerForm="ngForm">
         <div class="row mb-3">
             <div class="col-md-6">
                 <B>USERNAME</B>
@@ -71,7 +71,7 @@
             </div>    
         </form>
         <div>
-            <p class="offset-4" >Already a Member !!! <a class="form-link ms-1" routerLink="../login">Login</a></p>
+            <p class="offset-4" >Already a Member !!! <a class="form-link ms-1" routerLink="">Login</a></p>
         </div>
           <!--  -->
         </div>
