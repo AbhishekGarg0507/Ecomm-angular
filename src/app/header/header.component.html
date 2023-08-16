@@ -1,19 +1,19 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-full">
+<nav class="navbar navbar-expand-lg navbar-dark bg-light navbar-full fixed-top shadow">
     <a class="navbar-brand mx-5 nav-logo">The Store</a>
     
 
     <form class="form nav-search my-2 mt-2">
-        <input class="form-control" ty0pe="search" placeholder="Search for Products">
+        <input class="form-control" type="search" placeholder="Search for Products">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
   
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav nav-bar-item mr-auto mt-2  ms-auto me-5 ">
         <li class="nav-item">
-          <a class="nav-link">Home</a>
+          <a class="nav-link" routerLink="/" routerLinkActive="Active">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link">Seller</a>
+          <a class="nav-link" routerLink="/seller-auth"  routerLinkActive="Active">Seller</a>
         </li>
         <li class="nav-item">
           <a class="nav-link">Login</a>
