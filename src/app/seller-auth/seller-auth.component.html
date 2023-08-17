@@ -9,7 +9,7 @@
         </div>
         <div class="text-white bg-danger errMsg rounded my-3" *ngIf="!sellerForm.valid && sellerForm.touched">* is a required field</div>
           <!--  -->
-        <form (ngSubmit)="onSubmit(sellerForm.value)" #sellerForm="ngForm">
+        <form (ngSubmit)="Signup(sellerForm.value)" #sellerForm="ngForm">
         <div class="row mb-3">
             <div class="col-md-6">
                 <B>USERNAME</B>
@@ -86,17 +86,17 @@
                 <hr>
             </div>
             
-            <form (ngSubmit)="form" #form="ngForm">
+            <form (ngSubmit)="Login(sellerLogin.value)" #sellerLogin="ngForm">
               <B>EMAIL</B>
               <div class=" form-floating mb-3">
                   <input type="text" 
                          class="form-control" 
                          id="floatingInput" 
                          placeholder="name@example.com"
-                         name="username"
-                         ngModel required #username="ngModel">
+                         name="email"
+                         ngModel required #email="ngModel">
                   <label for="floatingInput">Email</label>
-                  <span class="text-danger" *ngIf="!username.valid && username.touched">Email is a required !!</span>
+                  <span class="text-danger" *ngIf="!email.valid && email.touched">Email is a required !!</span>
               </div>
               
   

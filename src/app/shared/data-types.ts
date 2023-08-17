@@ -8,3 +8,8 @@ export interface sellerSignup{
       password: string,
       confirmPassword: string 
 }
+
+export interface sellerLogin{
+  email:string,
+  password:string
+}
