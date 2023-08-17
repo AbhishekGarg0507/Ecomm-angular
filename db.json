@@ -23,17 +23,6 @@
       "id": 2
     },
     {
-      "username": "",
-      "phone": "",
-      "email": "",
-      "zipcode": "",
-      "address": "",
-      "password": "",
-      "confirmPassword": "",
-      "gender": "",
-      "id": 3
-    },
-    {
       "username": "DJ",
       "phone": 1234567890,
       "email": "Dj@seller.com",
@@ -42,7 +31,7 @@
       "password": "123456",
       "confirmPassword": "123456",
       "gender": "Male",
-      "id": 4
+      "id": 3
     }
   ]
 }

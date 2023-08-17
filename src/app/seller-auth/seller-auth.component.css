@@ -1,3 +1,9 @@
+.form-card{
+    border-radius: 16px;
+background: linear-gradient(315deg, #e1e1e1, #ffffff);
+box-shadow:  -35px -35px 74px #cbcbcb,
+             35px 35px 74px #ffffff;
+}
 B{
     font-size: small;
 }
