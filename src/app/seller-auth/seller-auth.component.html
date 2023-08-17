@@ -2,8 +2,11 @@
     <div class="row g-0">
       
       <div class="col-md-12">
-        <div class="card-body">
-        <h2 class="card-title mb-3">REGISTER SELLER</h2> 
+        <div class="card-body" *ngIf="!showloginForm">
+        <h2 class="card-title mb-3 text-center">REGISTER SELLER</h2> 
+        <div class="my-4 hr-color">
+            <hr>
+        </div>
         <div class="text-white bg-danger errMsg rounded my-3" *ngIf="!sellerForm.valid && sellerForm.touched">* is a required field</div>
           <!--  -->
         <form (ngSubmit)="onSubmit(sellerForm.value)" #sellerForm="ngForm">
@@ -70,11 +73,56 @@
                 <button type="submit" class="btn myButton" >Submit</button>
             </div>    
         </form>
-        <div>
-            <p class="offset-4" >Already a Member !!! <a class="form-link ms-1" routerLink="">Login</a></p>
+        <div class="text-center">
+            <p>Already a Member !!! <a class="form-link ms-1" (click)="openLogin()">Login</a></p>
         </div>
           <!--  -->
         </div>
+
+        <!-- LOgin Form -->
+        <div class="card-body" *ngIf="showloginForm">
+            <h2 class="card-title mb-3 text-center">SELLER LOGIN</h2>  
+            <div class="my-4 hr-color">
+                <hr>
+            </div>
+            
+            <form (ngSubmit)="form" #form="ngForm">
+              <B>EMAIL</B>
+              <div class=" form-floating mb-3">
+                  <input type="text" 
+                         class="form-control" 
+                         id="floatingInput" 
+                         placeholder="name@example.com"
+                         name="username"
+                         ngModel required #username="ngModel">
+                  <label for="floatingInput">Email</label>
+                  <span class="text-danger" *ngIf="!username.valid && username.touched">Email is a required !!</span>
+              </div>
+              
+  
+              <B>PASSWORD</B>
+              <div class="form-floating mb-3">
+                  <input type="password" 
+                         class="form-control" 
+                         id="floatingPassword" 
+                         placeholder="Password" 
+                         name="password" 
+                         ngModel required #email="ngModel">
+                  <label for="floatingPassword">Password</label>
+                  <span class="text-danger" *ngIf="!email.valid && email.touched">Password is a required !!</span>
+              </div>
+              
+  
+              <div class="mb-3 d-grid">
+                  <button type="submit" class="btn myButton" >SignIn</button>
+              </div>
+
+              <div class="col-md-12 text-center">
+                <p class="">Not a Member! <a class="form-link ms-1" (click)="openSignup()">SignUp</a></p>
+              </div>  
+            </form>
+          </div>
+
       </div>
     </div>
 
