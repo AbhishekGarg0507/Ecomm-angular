@@ -2,7 +2,7 @@
     <div class="row g-0">
       
       <div class="col-md-12">
-        <div class="card-body" *ngIf="!showloginForm">
+        <div class="card-body" *ngIf="showloginForm">
         <h2 class="card-title mb-3 text-center">REGISTER SELLER</h2> 
         <div class="my-4 hr-color">
             <hr>
@@ -80,13 +80,17 @@
         </div>
 
         <!-- LOgin Form -->
-        <div class="card-body" *ngIf="showloginForm">
+        <div class="card-body" *ngIf="!showloginForm">
             <h2 class="card-title mb-3 text-center">SELLER LOGIN</h2>  
             <div class="my-4 hr-color">
                 <hr>
             </div>
+            <div class="text-white bg-danger errMsg rounded my-3" *ngIf="AuthError">
+                <span >Email or Password is Empty or Invalid !!</span>
+            </div>
             
             <form (ngSubmit)="Login(sellerLogin.value)" #sellerLogin="ngForm">
+                
               <B>EMAIL</B>
               <div class=" form-floating mb-3">
                   <input type="text" 
@@ -96,7 +100,7 @@
                          name="email"
                          ngModel required #email="ngModel">
                   <label for="floatingInput">Email</label>
-                  <span class="text-danger" *ngIf="!email.valid && email.touched">Email is a required !!</span>
+                  
               </div>
               
   
@@ -109,12 +113,12 @@
                          name="password" 
                          ngModel required #email="ngModel">
                   <label for="floatingPassword">Password</label>
-                  <span class="text-danger" *ngIf="!email.valid && email.touched">Password is a required !!</span>
+                  
               </div>
               
   
               <div class="mb-3 d-grid">
-                  <button type="submit" class="btn myButton" >SignIn</button>
+                  <button type="submit" class="btn myButton" >Login</button>
               </div>
 
               <div class="col-md-12 text-center">

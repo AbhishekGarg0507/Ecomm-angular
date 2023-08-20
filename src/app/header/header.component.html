@@ -1,14 +1,19 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-light navbar-full fixed-top shadow">
-    <a class="navbar-brand mx-5 nav-logo">The Store</a>
+    <a class="navbar-brand mx-5 nav-logo" routerLink="/">The Store</a>
+   
+    
     
 
-    <form class="form nav-search my-2 mt-2">
+    <form class="form nav-search my-2 mt-2" *ngIf="menuType === 'default'">
         <input class="form-control" type="search" placeholder="Search for Products">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+    </form>
+
+    
   
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <ul class="navbar-nav nav-bar-item mr-auto mt-2  ms-auto me-5 ">
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02" [ngSwitch]="menuType">
+      <!-- switch the navbar for default case -->
+      <ul class="navbar-nav nav-bar-item mr-auto mt-2  ms-auto me-5 " *ngSwitchCase="'default'">
         <li class="nav-item">
           <a class="nav-link" routerLink="/" routerLinkActive="Active">Home</a>
         </li>
@@ -19,12 +24,33 @@
           <a class="nav-link">Login</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link">Cart <span class="sr-only">(0)</span></a>
+            <a class="nav-link"><mat-icon color = "primary">shopping_cart</mat-icon> <span class="sr-only">(0)</span></a>
         </li>
       </ul>
-      
+      <!-- switch the navbar for seller-auth case -->
+      <ul class="navbar-nav nav-bar-item mr-auto mt-2  ms-auto me-5 " *ngSwitchCase="'seller'">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="Active">Product List</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/seller-auth"  routerLinkActive="Active">Add Product</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Seller Name</a>
+        </li>
+        <li class="nav-item">
+            <a ><mat-icon color = "primary">exit_to_app</mat-icon></a>
+        </li>
+      </ul>
+
     </div>
+
+
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
   </nav>
+  <script src="node_modules/bootstrap/js/dist/dropdown.js">
+
+  </script>

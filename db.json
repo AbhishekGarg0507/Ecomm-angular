@@ -32,16 +32,7 @@
       "confirmPassword": "123456",
       "gender": "Male",
       "id": 3
-    },
-    {
-      "username": "abhishek@seller.com",
-      "password": "123456",
-      "id": 4
-    },
-    {
-      "username": "abhi@seller.com",
-      "password": "123456",
-      "id": 5
     }
+   
   ]
 }

@@ -11,6 +11,7 @@ import { sellerLogin, sellerSignup } from '../shared/data-types';
 export class SellerAuthComponent implements OnInit {
   genders = ['Male','Female'];
   showloginForm:boolean = false;
+  AuthError:string = "";
   constructor(private seller:SellerService,
     private router:Router){}
   
@@ -25,14 +26,20 @@ export class SellerAuthComponent implements OnInit {
 
   Login(data:sellerLogin):void {
     this.seller.sellerLogin(data);
+
+    this.seller.loginError.subscribe((isError) =>{
+      if(isError){
+        this.AuthError = "Email or Password is invalid";
+      }
+    })
     
   }
 
   openLogin(){
-    this.showloginForm = true;
+    this.showloginForm = false;
   }
   openSignup(){
-    this.showloginForm = false;
+    this.showloginForm = true;
   }
 
 }

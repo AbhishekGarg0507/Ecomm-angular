@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { sellerLogin, sellerSignup } from '../shared/data-types';
 import { BehaviorSubject } from 'rxjs';
@@ -9,6 +9,7 @@ import {  Router  } from '@angular/router';
 })
 export class SellerService {
   isSellerLoggedIn = new BehaviorSubject<boolean>(false);
+  loginError = new EventEmitter(false);
   constructor( private http:HttpClient,private route:Router) { }
 
   sellerSignup(data:sellerSignup){
@@ -39,7 +40,7 @@ export class SellerService {
       console.log('login success');}
       else{
         console.log('login failed');
-        
+        this.loginError.emit(true);
       }
       
     });
