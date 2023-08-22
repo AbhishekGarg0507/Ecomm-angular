@@ -30,16 +30,16 @@
       <!-- switch the navbar for seller-auth case -->
       <ul class="navbar-nav nav-bar-item mr-auto mt-2  ms-auto me-5 " *ngSwitchCase="'seller'">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/" routerLinkActive="Active">Product List</a>
+          <a class="nav-link" routerLink="/seller-home" routerLinkActive="Active">Product List</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/seller-auth"  routerLinkActive="Active">Add Product</a>
+          <a class="nav-link" routerLink="/seller-add-product"  routerLinkActive="Active">Add Product</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link">Seller Name</a>
+          <a class="nav-link">{{sellerName | titlecase}}</a>
         </li>
         <li class="nav-item">
-            <a ><mat-icon color = "primary">exit_to_app</mat-icon></a>
+            <a (click)="logout()"><mat-icon>exit_to_app</mat-icon></a>
         </li>
       </ul>
 

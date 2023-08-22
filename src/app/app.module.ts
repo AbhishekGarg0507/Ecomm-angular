@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
+import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {MatIconModule} from '@angular/material/icon';
     SellerAuthComponent,
     HomeComponent,
     SellerHomeComponent,
+    SellerAddProductComponent,
   ],
   imports: [
     BrowserModule,

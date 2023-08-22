@@ -36,3 +36,8 @@
 .nav-bar-item a :hover{
     color: rgb(235, 86, 255);
 }
+.nav-item a:active{
+    font-style: bold;
+    font-size: 18px;
+    color: rgb(155, 1, 175);
+}

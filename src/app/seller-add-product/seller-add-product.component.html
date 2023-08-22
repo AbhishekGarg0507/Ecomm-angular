@@ -1,0 +1,63 @@
+<div class="card mb-3 mx-auto mt-5 form-card" style="max-width: 900px; border:0">
+    <div class="row g-0">
+<div class="card-body" >
+    <h2 class="card-title mb-3 text-center">Add Product</h2> 
+    <div class="my-4 hr-color">
+        <hr>
+    </div>
+    
+      <!--  -->
+    <form (ngSubmit)="addProduct(addProductForm.value)" #addProductForm="ngForm">
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <B>NAME</B>
+            <div class=" form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInputUser" placeholder="productName" name="productName" ngModel required>
+            <label for="floatingInputUser">Product Name*</label>
+            </div>
+
+            <B>PRICE</B>
+            <div class=" form-floating">
+            <input type="number" class="form-control" id="floatingInputPhone" placeholder="Product Price" name="productPrice" ngModel required >
+            <label for="floatingInputPhone">Product Price (In Ruppee)*</label>
+            </div>
+        </div>
+        <div class="col-md-6">
+                <B>CATEGORY</B>
+                <div class=" form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInputEmail" placeholder="Category" name="productCategory" ngModel required >
+                <label for="floatingInputEmail">Product Category*</label>
+                </div>
+
+                <B>COLOR</B>
+                <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInputZip" placeholder="Zipcode" name="zipcode" ngModel required>
+                <label for="floatingInputZip">COLOR*</label>
+                </div>
+        </div>
+    </div>
+        <!--  -->
+    <div class="mb-3">
+        <B>DESCRIPTION</B>
+        <div class=" form-floating mb-3">
+            <textarea type="text" style="height: 100px" class="form-control" id="floatingInputAddress"  placeholder="description" name="description" ngModel required></textarea>
+            <label for="floatingInputAddress">Product Description*</label>
+        </div>
+    </div>
+    <div class="mb-3">
+        <B>PRODUCT IMAGE</B>
+        <div class=" form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInputAddress" placeholder="image" name="image" ngModel required>
+            <label for="floatingInputAddress">Enter Product Image URL*</label>
+        </div>
+    </div>
+        
+        
+        <div class="mb-3 d-grid">
+            <button type="submit" class="btn myButton" >ADD</button>
+        </div>    
+    </form>
+      <!--  -->
+    </div>
+    </div>
+    </div>

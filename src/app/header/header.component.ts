@@ -9,6 +9,7 @@ import { Router, UrlTree } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   menuType:string = 'default';
+  sellerName:string = '';
   constructor(private router : Router){}
   ngOnInit(): void {
     
@@ -17,12 +18,23 @@ export class HeaderComponent implements OnInit {
         if(localStorage.getItem('seller') && val.url.includes('seller')){
           console.log('in seller page');
           this.menuType = 'seller';
+          if(localStorage.getItem('seller')){
+            let sellerStore = localStorage.getItem('seller');
+            let sellerData = sellerStore && JSON.parse(sellerStore)[0];
+            console.log(sellerData.username);
+            
+            this.sellerName = sellerData.username ;
+          }
         }else{
-          console.log('outside seller');
           this.menuType = 'default';
         }
       }
     })
+  }
+
+  logout(){
+    localStorage.removeItem('seller');
+    this.router.navigate(['/']);
   }
 
 }
