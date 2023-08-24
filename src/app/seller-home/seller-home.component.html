@@ -1,1 +1,32 @@
-<p>seller-home works!</p>
+<!-- <div class="card" style="width: 18rem;" *ngFor="let item of productList">
+    <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{item.productName}}</h5>
+      <p class="card-text">{{item.description}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Category: {{item.productCategory}}</li>
+      <li class="list-group-item">Color: {{item.color}}</li>
+      <li class="list-group-item">Price: {{item.productPrice}}</li>
+    </ul>
+    <div class="card-body">
+      <a href="#" class="card-link">Add to cart</a>
+      <a href="#" class="card-link">wishlist</a>
+    </div>
+  </div> -->
+
+  <div class="card" *ngFor="let item of productList">
+    <div class="first-content">
+        <img class="" src="{{item.image}}" alt="{{item.productName}}">
+    </div>
+    <div class="second-content">
+        <div class="card card-body">
+            <p class="card-title">Product title </p>
+            <p class="card-description">Product description and details</p>
+        
+          <span class="text-title">$499.49</span>
+        </div>
+    </div>
+  
+  
+  </div>

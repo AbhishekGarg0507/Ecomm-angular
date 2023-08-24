@@ -5,18 +5,17 @@
 }
 .nav-search{
     display: inline-flex;
-    
-   width: 550px !important; 
+    width: 650px !important; 
 }
 
 .nav-search input{
-    border:0;
+    border:1px solid rgb(175, 44, 192);
     border-right: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
 .nav-search button{
-    border:0;
+    border:1px solid rgb(175, 44, 192);
     border-left: 0;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;

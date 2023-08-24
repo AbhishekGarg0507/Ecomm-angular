@@ -5,7 +5,7 @@
     <div class="my-4 hr-color">
         <hr>
     </div>
-    
+    <div class="alert alert-success" *ngIf="addProductMsg">{{addProductMsg}}</div>
       <!--  -->
     <form (ngSubmit)="addProduct(addProductForm.value)" #addProductForm="ngForm">
     <div class="row mb-3">
@@ -31,7 +31,7 @@
 
                 <B>COLOR</B>
                 <div class="form-floating">
-                <input type="text" class="form-control" id="floatingInputZip" placeholder="Zipcode" name="zipcode" ngModel required>
+                <input type="text" class="form-control" id="floatingInputZip" placeholder="color" name="color" ngModel required>
                 <label for="floatingInputZip">COLOR*</label>
                 </div>
         </div>
