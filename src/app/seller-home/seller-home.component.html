@@ -21,11 +21,16 @@
     </div>
     <div class="second-content">
         <div class="card card-body">
-            <p class="card-title">Product title </p>
-            <p class="card-description">Product description and details</p>
+            <p class="card-title">{{item.productName}}</p>
+            <p class="card-title">{{item.productCategory}}</p>
+            <p class="card-description">{{item.description}}</p>
+            <p class="card-color">{{item.color}}</p>
         
-          <span class="text-title">$499.49</span>
+          <span class="text-title">Rs.{{item.productPrice}}</span>
+          <a routerLink="/seller-home" class="card-link">Delete Product</a>
+          <a routerLink="/seller-home" class="card-link">wishlist</a>
         </div>
+        
     </div>
   
   
