@@ -37,10 +37,10 @@
   "products": [
     {
       "productName": "Iphone 14 pro",
-      "productPrice": 100000,
-      "productCategory": "mobiles",
-      "color": "purple",
-      "description": "must have product",
+      "productPrice": 15000,
+      "productCategory": "Mobile",
+      "color": "Purple",
+      "description": "A apple product.",
       "image": "https://www.apple.com/v/iphone-14-pro/e/images/meta/iphone-14-pro_overview__3dn6st99cpea_og.png",
       "id": 1
     }

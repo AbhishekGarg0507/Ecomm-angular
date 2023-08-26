@@ -1,37 +1,19 @@
-<!-- <div class="card" style="width: 18rem;" *ngFor="let item of productList">
-    <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">{{item.productName}}</h5>
-      <p class="card-text">{{item.description}}</p>
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Category: {{item.productCategory}}</li>
-      <li class="list-group-item">Color: {{item.color}}</li>
-      <li class="list-group-item">Price: {{item.productPrice}}</li>
-    </ul>
-    <div class="card-body">
-      <a href="#" class="card-link">Add to cart</a>
-      <a href="#" class="card-link">wishlist</a>
-    </div>
-  </div> -->
-
-  <div class="card" *ngFor="let item of productList">
+<div class="container row row-col-3"> 
+  <div class="alert alert-success" *ngIf="deleteMsg">{{deleteMsg}}</div>
+  <div class="card ms-4" *ngFor="let item of productList">
     <div class="first-content">
         <img class="" src="{{item.image}}" alt="{{item.productName}}">
     </div>
     <div class="second-content">
-        <div class="card card-body">
+      <div class=" card-body">
             <p class="card-title">{{item.productName}}</p>
             <p class="card-title">{{item.productCategory}}</p>
             <p class="card-description">{{item.description}}</p>
             <p class="card-color">{{item.color}}</p>
-        
-          <span class="text-title">Rs.{{item.productPrice}}</span>
-          <a routerLink="/seller-home" class="card-link">Delete Product</a>
-          <a routerLink="/seller-home" class="card-link">wishlist</a>
-        </div>
-        
+            <span class="text-title">Rs.{{item.productPrice}}</span>
+            <button  class="btn btn-primary" (click)="deleteProduct(item.id)">Delete Product</button>
+            <button routerLink="/seller-update-product/{{item.id}}" class="btn btn-primary">Edit Product</button>
+          </div>
     </div>
-  
-  
   </div>
+</div>

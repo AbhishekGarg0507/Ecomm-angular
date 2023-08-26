@@ -9,7 +9,6 @@ import { product } from '../shared/data-types';
 })
 export class SellerAddProductComponent {
   addProductMsg:string | undefined;
-  displayMsg = false;
   constructor(private productService:ProductService){}
 
   addProduct(Data:product){
@@ -17,7 +16,6 @@ export class SellerAddProductComponent {
       console.log(result);
       if(result){
         this.addProductMsg = "Product is successfully added";
-        this.displayMsg = true;
       }setTimeout(()=> (this.addProductMsg=undefined),3000);
       
     })

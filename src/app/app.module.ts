@@ -12,6 +12,8 @@ import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { SellerAddProductComponent } from './seller-add-product/seller-add-produ
     HomeComponent,
     SellerHomeComponent,
     SellerAddProductComponent,
+    SellerUpdateProductComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import { SellerAddProductComponent } from './seller-add-product/seller-add-produ
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
