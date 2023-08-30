@@ -12,17 +12,6 @@
       "id": 1
     },
     {
-      "username": "Abhishek",
-      "phone": 1234567890,
-      "email": "abhishek@seller.com",
-      "zipcode": 123456,
-      "address": "Haryana",
-      "password": "123456",
-      "confirmPassword": "123456",
-      "gender": "Male",
-      "id": 2
-    },
-    {
       "username": "DJ",
       "phone": 1234567890,
       "email": "Dj@seller.com",
@@ -31,7 +20,7 @@
       "password": "123456",
       "confirmPassword": "123456",
       "gender": "Male",
-      "id": 3
+      "id": 2
     }
   ],
   "products": [
@@ -43,6 +32,51 @@
       "description": "A apple product.",
       "image": "https://www.apple.com/v/iphone-14-pro/e/images/meta/iphone-14-pro_overview__3dn6st99cpea_og.png",
       "id": 1
+    },
+    {
+      "id": 2,
+      "productCategory": "Home-Appliance",
+      "productName": "Refrigerator with Water Dispenser",
+      "productPrice": "₹48,990",
+      "color": "Grey",
+      "description": "MarQ by Flipkart 560 L Frost Free Side by Side Refrigerator with Water Dispenser  (Silver, Grey, SBS-560W)",
+      "image": "https://rukminim1.flixcart.com/image/416/416/jwkzwy80/refrigerator-new/u/h/k/sbs-560w-na-marq-by-flipkart-original-imafh8mfjsc9maqv.jpeg?q=70"
+    },
+    {
+      "id": 3,
+      "productCategory": "Home-Appliance",
+      "color": "Green-floral",
+      "productName": "SAMSUNG 225 L",
+      "productPrice": "₹20,190",
+      "description": "Direct Cool Single Door 4 Star Refrigerator with Base Drawer with Digi Touch Cool, BSD  (Paradise BLUE, RR23A2F3X9U/HL)",
+      "image": "https://rukminim1.flixcart.com/image/416/416/l3xcr680/refrigerator-new/e/p/4/-original-imageyygyp5yg9fz.jpeg?q=70"
+    },
+    {
+      "id": 4,
+      "productCategory": "Home-Appliance",
+      "color": "White",
+      "productName": "Air Cooler with Aerofan technology",
+      "productPrice": "₹9,399",
+      "description": "Orient Electric 85 L Desert Air Cooler with Aerofan technology,Densenest Honeycomb design  (White, Black, Snowbreeze Magnus Neo 85/CD8502H)",
+      "image": "https://rukminim1.flixcart.com/image/416/416/kmp7ngw0/air-cooler/n/y/w/snowbreeze-magnus-neo-orient-electric-original-imagfjzzeuwr9syy.jpeg?q=70"
+    },
+    {
+      "productName": "Whirlpool 7.5 kg Washing Machine",
+      "productPrice": "₹18,524",
+      "productCategory": "Home-Appliance",
+      "color": "Black",
+      "description": "5 Star Fully Automatic Top Load with In-built Heater Grey  (SW Ultra 7.5 (SC) Grey 10YMW)",
+      "image": "https://rukminim1.flixcart.com/image/416/416/kmf7ki80/washing-machine-new/g/b/z/sw-ultra-7-5-sc-grey-10ymw-whirlpool-original-imagfbjgzwy8yzam.jpeg?q=70",
+      "id": 5
+    },
+    {
+      "productName": "V-Guard VKS15",
+      "productPrice": 720,
+      "productCategory": "Home-Appliance",
+      "color": "Grey",
+      "description": "Stainless Steel 1500 W Electric Kettle  (1.5 L, Steel-Black)",
+      "image": "https://rukminim1.flixcart.com/image/416/416/l572ufk0/electric-kettle/m/9/3/vks15-vks15-stainless-steel-1500-w-v-guard-original-imagfxfxjvwwddvy.jpeg?q=70",
+      "id": 6
     }
   ]
 }

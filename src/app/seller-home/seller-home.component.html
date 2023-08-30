@@ -1,6 +1,6 @@
 <div class="container row row-col-3"> 
   <div class="alert alert-success" *ngIf="deleteMsg">{{deleteMsg}}</div>
-  <div class="card ms-4" *ngFor="let item of productList">
+  <!-- <div class="card ms-4" *ngFor="let item of productList">
     <div class="first-content">
         <img class="" src="{{item.image}}" alt="{{item.productName}}">
     </div>
@@ -15,5 +15,25 @@
             <button routerLink="/seller-update-product/{{item.id}}" class="btn btn-primary">Edit Product</button>
           </div>
     </div>
+  </div> -->
+  <div class="card mb-3 ms-5" style="width: 18rem;" *ngFor="let item of productList">
+    <img class="img-fluid mt-3" src="{{item.image}}" alt="{{item.productName}}">
+    <div class="card-body">
+      <h4 class="card-title">{{item.productName}}</h4>
+      <div class="text">
+        <p class="card-text">{{item.description}}</p>
+        <p class="card-text">Color: {{item.color}}</p>
+        <p class="card-text">Price: {{item.productPrice}}</p>
+      </div>
+      <div class="button mt-3 me-auto">
+        <a (click)="deleteProduct(item.id)">Delete</a>
+        <a  routerLink="/seller-update-product/{{item.id}}">Edit</a>
+      </div>
+      
+    </div>
   </div>
+
+
 </div>
+
+

@@ -23,9 +23,10 @@
         <li class="nav-item">
           <a class="nav-link">Login</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link"><mat-icon color = "primary">shopping_cart</mat-icon> <span class="sr-only">(0)</span></a>
+        <li class="nav-item" >
+            <a class="nav-link"><mat-icon >shopping_cart</mat-icon> </a>
         </li>
+        <span class="cartCount">0</span>
       </ul>
       <!-- switch the navbar for seller-auth case -->
       <ul class="navbar-nav nav-bar-item mr-auto mt-2  ms-auto me-5 " *ngSwitchCase="'seller'">
@@ -38,7 +39,7 @@
         <li class="nav-item">
           <a class="nav-link">{{sellerName | titlecase}}</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" style="margin-top: 5px;">
             <a (click)="logout()"><mat-icon>exit_to_app</mat-icon></a>
         </li>
       </ul>
