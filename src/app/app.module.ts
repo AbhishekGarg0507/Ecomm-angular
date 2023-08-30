@@ -14,6 +14,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
+import { SearchComponent } from './search/search.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { SellerUpdateProductComponent } from './seller-update-product/seller-upd
     SellerHomeComponent,
     SellerAddProductComponent,
     SellerUpdateProductComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,

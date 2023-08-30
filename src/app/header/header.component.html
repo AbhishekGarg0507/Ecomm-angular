@@ -5,8 +5,13 @@
     
 
     <form class="form nav-search my-2 mt-2" *ngIf="menuType === 'default'">
-        <input class="form-control" type="search" placeholder="Search for Products">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <input class="form-control" type="search" placeholder="Search for Products" (keyup)="searchProduct($event)" (blur)="emptySearch()" #searchBox>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="submitSearch(searchBox.value)">Search</button>
+        <ul class="search-result" *ngIf="searchResult">
+          <li *ngFor="let item of searchResult">
+            <a href="#">{{item.productName}}</a>
+          </li>
+        </ul>
     </form>
 
     
