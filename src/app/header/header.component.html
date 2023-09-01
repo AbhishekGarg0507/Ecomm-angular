@@ -1,12 +1,9 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-light navbar-full fixed-top shadow">
+<nav class="navbar navbar-expand-lg navbar-dark bg-light navbar-full shadow">
     <a class="navbar-brand mx-5 nav-logo" routerLink="/">The Store</a>
    
-    
-    
-
     <form class="form nav-search my-2 mt-2" *ngIf="menuType === 'default'">
-        <input class="form-control" type="search" placeholder="Search for Products" (keyup)="searchProduct($event)" (blur)="emptySearch()" #searchBox>
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="submitSearch(searchBox.value)">Search</button>
+        <input class="form-control" type="search" placeholder="Search for Products" #searchBox (keyup)="searchProduct($event)" (blur)="emptySearch()" >
+        <button class="btn btn-outline-success my-2 my-sm-0" (click)="submitSearch(searchBox.value)">Search</button>
         <ul class="search-result" *ngIf="searchResult">
           <li *ngFor="let item of searchResult">
             <a href="#">{{item.productName}}</a>

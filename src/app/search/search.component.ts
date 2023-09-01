@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../services/product.service';
 import { product } from '../shared/data-types';
+import { Expo, gsap } from 'gsap';
 
 @Component({
   selector: 'app-search',
@@ -13,10 +14,16 @@ export class SearchComponent implements OnInit{
   constructor( private route:ActivatedRoute ,private product:ProductService){}
 
   ngOnInit(): void {
-    let query = this.route.snapshot.paramMap.get('query');
-    console.warn(query);
+    let query = this.route.snapshot.paramMap.get('query') ?? undefined;
+    
     query && this.product.searchProduct(query).subscribe((result) =>{
       this.searchResult = result;
-    })
+      console.warn(query);
+    });
+
+    
   }
+
+  
+  
 }

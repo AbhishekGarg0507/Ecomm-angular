@@ -1,47 +1,68 @@
-#home{
-    /* background-color: red; */
-    height: 100%;
+ 
+#main{
     width: 100%;
 }
-
-.homeSlider{
-    margin-left: 10%;
-    height: 80%;
-    width: 80%;
-    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.651),0 10px 30px 0 rgb(139, 139, 139);
+#center{
+    margin-top: 2%;
+    position: absolute;
+    left: 20%;
+    top:50%;
+    transform: translate(0%,-50%);
+    width: 70%;
+    height: 80vh;
 }
-
-.carousel-item img{
-    height: 500px;
+.imgContainer{
+    position: absolute;
+    overflow: hidden;
+    height: 80vh;
+    width:0;
 }
-.home-heading{
-    height: 100%;
+img{
+    height: 100vh;
+}
+.text{
+    z-index: 1;
+    position: absolute;
+    margin-top: 300px;
+    margin-left: -120px;
+    line-height: 8vw;
+    overflow: hidden;
+    width: 500px;
+    height: 110px;
+}
+.text p{
+    font-size: 7vw;
+    font-weight: 700;
+    top: 100px;
+    color: black;
+    position: absolute;
+}
+#trendyItems{
     width: 100%;
-    margin-top: 8%;
-    margin-bottom: 4%;
-    color: #111;
+    margin-top: 50%;
 }
-.home-heading h1{
-    background-color: rgb(196, 196, 196);
-    padding: 5px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 40px;
-    /* border: 1px solid black; */
-}
-.card-footer a{
-    margin-left: 10px;
-    font-size: 18px;
-    text-decoration: none;
-    color: #111;
-    cursor: pointer;
-}
-.card-footer a:hover{
-    color: blueviolet;
+
+.card{
+    left: 5%;
 }
 .card img{
-    height: 150px;
+    height: 200px;
 }
-.homeTrendyItems{
-    align-items: center;
+.headingTrendy{
+    margin: 20px 0px;
+    padding: 10px 0;
+    color: white;
+
+    border: 1px solid rgb(102, 102, 102);
+    text-align: center;
+    border-radius: 5px;
+    background-color: #000000;
+}
+.headingTrendy h1{
+    padding-top: 10px;
+    font-weight: 400;
+    font-size: 4vw;
+}
+.card-footer a{
+    margin-left: 25px;
 }

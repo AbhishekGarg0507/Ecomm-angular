@@ -1,28 +1,59 @@
-<div class="home">
-  <div class="homeSlider">
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false" >
-      <div class="carousel-inner" *ngFor="let item of popularProducts">
-        <div class="carousel-item active">
-          <img src="{{item.image}}" class="d-block w-80 h-80" >
-          <div class="carousel-caption d-none d-md-block">
-            <h1>{{item.productName}}</h1>
+
+<!-- <i class="ri-instagram-fill"></i>
+            <i class="ri-twitter-x-fill"></i>
+            <i class="ri-facebook-fill"></i> -->
+<div id="main">
+  <div id="center" >
+
+    <div class="text">
+      <p>Welcome.</p>
+      <p>Groceries.</p>
+      <p>Cloathing.</p>
+    </div>
+    <div class="imgContainer">
+      <img src="https://images.unsplash.com/photo-1580554430120-94cfcb3adf25?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="">
+    </div>
+    <div class="imgContainer">
+      <img src="https://images.unsplash.com/photo-1506617420156-8e4536971650?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1423&q=80" alt="">  
+    </div>
+    <div class="imgContainer"> 
+      <img src="https://images.unsplash.com/photo-1595665593673-bf1ad72905c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1628&q=80" alt="">
+    </div>
+    
+
+
+  </div>
+  <div id="trendyItems">
+    <div class="container">
+
+      <div class="headingTrendy">
+        <h1>Popular Products</h1>
+      </div>
+      <div class="row row-col-sm-3" >
+        <div class="card mb-3 ms-5" style="width: 18rem;" *ngFor="let item of popularProducts">
+          <img class="img-fluid mt-3" src="{{item.image}}" alt="...">
+          <div class="card-body">
+            <h4 class="card-title">{{item.productName}}</h4>
+            <div class="text">
+              <p class="card-text">{{item.description}}</p>
+              <p class="card-text">Color:{{item.color}} </p>
+              <p class="card-text">Price: {{item.productPrice}} </p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="">View Details</a>
+            <a href="">Add to cart</a>
           </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
   </div>
+  <div id="Items">
+    <div class="container">
 
-  <div class="homeTrendyItems">
-    <div class="home-heading"> <h1>Trendy Products </h1></div>
-    <div class="row ms-4">
+      <div class="headingTrendy">
+        <h1>Trendy Products</h1>
+      </div>
       <div class="row row-col-sm-3" >
         <div class="card mb-3 ms-5" style="width: 18rem;" *ngFor="let item of trendyProducts">
           <img class="img-fluid mt-3" src="{{item.image}}" alt="...">
@@ -42,4 +73,5 @@
       </div>
     </div>
   </div>
+  
 </div>

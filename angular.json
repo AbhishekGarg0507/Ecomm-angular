@@ -30,7 +30,8 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.js"
+              "node_modules/bootstrap/dist/js/bootstrap.js",
+              "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
             ]
           },
           "configurations": {

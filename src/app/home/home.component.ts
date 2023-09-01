@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { product } from '../shared/data-types';
+import { Expo, gsap } from 'gsap';
 
 @Component({
   selector: 'app-home',
@@ -20,6 +21,35 @@ export class HomeComponent implements OnInit {
     this.product.trendyProducts().subscribe((data) =>{
       this.trendyProducts = data;
     })
+
+    // this is the animation css from the gsap library
+    var tl = gsap.timeline({
+      repeat: -1
+    });
+    tl.to(".imgContainer",{
+      ease:Expo.easeInOut,
+      duration:1,
+      width:'100%',
+      stagger:2
+    },'a')
+    .to('.text p',{
+      ease:Expo.easeInOut,
+      duration:1,
+      stagger:2,
+      top:0
+    },'a')
+    .to('.text p',{
+      delay:2,
+      ease:Expo.easeInOut,
+      duration:1,
+      stagger:2,
+      top:'-100%'
+    },'a')
+
+
+
+
+  }
   }
 
-}
+
