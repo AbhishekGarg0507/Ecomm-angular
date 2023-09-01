@@ -23,7 +23,7 @@ const routes: Routes = [
   {path:'seller-update-product/:id' , component:SellerUpdateProductComponent,
     canActivate:[AuthGuardGuard]
   },
-  {path:'search/:query',component:SearchComponent,
+  {component:SearchComponent, path:'search/:query',
   }
 ];
 

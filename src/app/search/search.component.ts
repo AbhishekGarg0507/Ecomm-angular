@@ -11,14 +11,16 @@ import { Expo, gsap } from 'gsap';
 })
 export class SearchComponent implements OnInit{
   searchResult:undefined|product[];
-  constructor( private route:ActivatedRoute ,private product:ProductService){}
+  text: any;
+  constructor( private activeRoute:ActivatedRoute ,private product:ProductService){}
 
   ngOnInit(): void {
-    let query = this.route.snapshot.paramMap.get('query') ?? undefined;
+    this.text = this.activeRoute.snapshot.paramMap.get('query');
+    console.error(this.activeRoute.snapshot.paramMap.get('query'));
     
-    query && this.product.searchProduct(query).subscribe((result) =>{
+    this.text && this.product.searchProduct(this.text).subscribe((result) =>{
       this.searchResult = result;
-      console.warn(query);
+      console.warn(this.text);
     });
 
     
