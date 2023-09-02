@@ -1,0 +1,54 @@
+<div class="main">
+    <div class="product">
+        <div class="row" *ngIf="detailProduct">
+            <div class="col-sm-7 product-image" >
+                <div class="imageContainer">
+                    <img src="{{detailProduct.image}}" alt="">
+                </div>
+            </div>
+            <div class="col-sm-5 product-content">
+                <div class="heading">
+                    <h1>{{detailProduct.productName}}</h1>
+                    <a href=""><i class="ri-heart-fill"></i></a>  
+                </div>
+                <div class="subContent">
+                    <p>{{detailProduct.description}}</p>
+                    <p>Category: {{detailProduct.productCategory}}</p>
+                    <p>Color: {{detailProduct.color}}</p>
+                    <p [style.backgroundColor]="detailProduct.color" class="product-color"></p>
+                    
+                    <p>Price: &#8377; {{detailProduct.productPrice}}</p>
+                </div>
+                <div class="buttons">
+                    <div class="quantity">
+                        <button class="minus-button me-1" (click)="handleQuantity('min')">-</button>
+                        <input type="number" name="" id="" value="{{productQuantity}}">
+                        <button class="add-button ms-1" (click)="handleQuantity('max')">+</button>
+                    </div>
+                    <div class="navigation-button">
+                        <button class="cart-button me-3"> <i class="ri-shopping-cart-2-fill"></i> Add to cart</button>
+                        <button class="buy-button"> <i class="ri-shopping-cart-2-fill"></i> Buy Now</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="similarProduct">
+        <div class="headingSub">
+            <h1>Similar Products</h1>
+        </div>
+        <div class="cards">
+            <div class="">
+                <div class="similarproduct-card shadow">
+                    <div class="imagecontainer-bottom">
+                        <img src="https://images.unsplash.com/photo-1561816544-21ecbffa09a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="">
+                    </div>
+                    <div class="card-heading">
+                        <h1>Thsi is the heading to the</h1>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>

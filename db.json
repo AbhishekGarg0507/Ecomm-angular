@@ -43,13 +43,13 @@
       "image": "https://rukminim1.flixcart.com/image/416/416/jwkzwy80/refrigerator-new/u/h/k/sbs-560w-na-marq-by-flipkart-original-imafh8mfjsc9maqv.jpeg?q=70"
     },
     {
-      "id": 3,
-      "productCategory": "Home-Appliance",
-      "color": "Green-floral",
       "productName": "SAMSUNG 225 L",
-      "productPrice": 20190,
+      "productPrice": "20190",
+      "productCategory": "Home-Appliance",
+      "color": "Darkgreen",
       "description": "Direct Cool Single Door 4 Star Refrigerator with Base Drawer with Digi Touch Cool, BSD  (Paradise BLUE, RR23A2F3X9U/HL)",
-      "image": "https://rukminim1.flixcart.com/image/416/416/l3xcr680/refrigerator-new/e/p/4/-original-imageyygyp5yg9fz.jpeg?q=70"
+      "image": "https://rukminim1.flixcart.com/image/416/416/l3xcr680/refrigerator-new/e/p/4/-original-imageyygyp5yg9fz.jpeg?q=70",
+      "id": 3
     },
     {
       "id": 4,
@@ -80,21 +80,45 @@
     },
     {
       "id": 7,
-      "productName":"realme Pad X 6 GB RAM 128 GB ROM",
-      "productPrice":25999,
-      "color":"Black",
-      "productCategory":"Mobile",
-      "description":"11 inch with Wi-Fi+5G Tablet (Glacier Blue)",
-      "image":"https://rukminim1.flixcart.com/image/416/416/xif0q/tablet/y/a/y/-original-imaggfrhvghucswf.jpeg?q=70"
+      "productName": "realme Pad X 6 GB RAM 128 GB ROM",
+      "productPrice": 25999,
+      "color": "Black",
+      "productCategory": "Mobile",
+      "description": "11 inch with Wi-Fi+5G Tablet (Glacier Blue)",
+      "image": "https://rukminim1.flixcart.com/image/416/416/xif0q/tablet/y/a/y/-original-imaggfrhvghucswf.jpeg?q=70"
     },
     {
       "id": 8,
-      "productName":"Canon EOS 3000D DSLR Camera",
-      "productPrice":26999,
-      "color":"Black",
-      "productCategory":"Home-Appliance",
-      "description":"18 - 55 mm Lens  (Black)",
-      "image":"https://rukminim1.flixcart.com/image/312/312/jfbfde80/camera/n/r/n/canon-eos-eos-3000d-dslr-original-imaf3t5h9yuyc5zu.jpeg?q=70"
+      "productName": "Canon EOS 3000D DSLR Camera",
+      "productPrice": 26999,
+      "color": "Black",
+      "productCategory": "Home-Appliance",
+      "description": "18 - 55 mm Lens  (Black)",
+      "image": "https://rukminim1.flixcart.com/image/312/312/jfbfde80/camera/n/r/n/canon-eos-eos-3000d-dslr-original-imaf3t5h9yuyc5zu.jpeg?q=70"
+    }
+  ],
+  "users": [
+    {
+      "username": "Abhi",
+      "phone": 1234567890,
+      "email": "abhi@user.com",
+      "zipcode": 123456,
+      "address": "cloud",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "gender": "Male",
+      "id": 1
+    },
+    {
+      "username": "abhishek",
+      "phone": 1234567890,
+      "email": "abhishek@user.com",
+      "zipcode": 123456,
+      "address": "dark world",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "gender": "Male",
+      "id": 2
     }
   ]
 }

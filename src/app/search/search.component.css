@@ -1,9 +1,14 @@
 
-.card img{
+.cardImage{
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 200px;    
+}
+.cardImage img{
+    object-fit: cover;
     height: 200px;
-
 }
 .container{
     padding-top:100px;
-    /* background-color: red; */
 }

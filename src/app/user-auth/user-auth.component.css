@@ -1,0 +1,43 @@
+.main{
+    margin-top: 8%;
+    height: 100%;
+     width: 100%;
+    /*box-sizing: border-box;
+    background-color: red; */
+}
+
+.form-card{
+    
+    border-radius: 16px;
+    background: linear-gradient(315deg, #e1e1e1, #ffffff);
+    box-shadow:  -35px -35px 74px #cbcbcb,
+             35px 35px 74px #ffffff;
+}
+B{
+    font-size: small;
+}
+.myButton{
+    background-color: rgb(175, 44, 192);
+    color:white;
+    border: 1px solid rgb(175, 44, 192);
+}
+.myButton:focus{
+    border: 1px solid rgb(175, 44, 192);
+}
+a{
+    text-decoration: none;
+    color: rgb(175, 44, 192);
+    cursor: pointer;
+}
+input.ng-invalid.ng-touched{
+    border: 1px solid rgb(201, 29, 29);
+}
+
+.errMsg{
+    border: 1px solid rgb(201, 29, 29);
+    padding-left: 20px;
+}
+
+.hr-color hr{
+    border: 1px solid rgb(225, 0, 255);
+}

@@ -46,13 +46,13 @@ img{
     left: 5%;
 }
 .card img{
+    width: 260px;
     height: 200px;
 }
 .headingTrendy{
     margin: 20px 0px;
     padding: 10px 0;
     color: white;
-
     border: 1px solid rgb(102, 102, 102);
     text-align: center;
     border-radius: 5px;
@@ -65,4 +65,10 @@ img{
 }
 .card-footer a{
     margin-left: 25px;
+    text-decoration: none;
+    color: #111;
+    cursor: pointer;
+}
+.card-footer a:hover{
+    color: blueviolet;
 }

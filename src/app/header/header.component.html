@@ -6,7 +6,7 @@
         <button class="btn btn-outline-success my-2 my-sm-0" (click)="submitSearch(searchBox.value)">Search</button>
         <ul class="search-result" *ngIf="searchResult">
           <li *ngFor="let item of searchResult">
-            <a href="#">{{item.productName}}</a>
+            <a (mousedown)="redirectToDetail(item.id)">{{item.productName}}</a>
           </li>
         </ul>
     </form>
@@ -23,7 +23,7 @@
           <a class="nav-link" routerLink="/seller-auth"  routerLinkActive="Active">Seller</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link">Login</a>
+          <a class="nav-link" routerLink="/user-auth">Login/signup</a>
         </li>
         <li class="nav-item" >
             <a class="nav-link"><mat-icon >shopping_cart</mat-icon> </a>

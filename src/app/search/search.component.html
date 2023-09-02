@@ -1,16 +1,20 @@
 <div class="container">
   <div class="card mb-3"  *ngFor="let item of searchResult">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img src="https://www.apple.com/v/iphone-14-pro/e/images/meta/iphone-14-pro_overview__3dn6st99cpea_og.png" class="img-fluid rounded-start" alt="...">
+    <div class="row g-0 cardData">
+      <div class="col-md-4 cardImage">
+        <a routerLink="/details/{{item.id}}">
+          <img src="{{item.image}}" class="img-fluid rounded-start" alt="{{item.productName}}">
+        </a>
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h1 class="card-title">Card title</h1>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text">Price(In ruppee): </p>
-          <span class="card-text">Color: Black </span> <span> | </span>
-          <span class="card-text">Category : Mobile</span>
+          <a routerLink="/details/{{item.id}}">
+              <h1 class="card-title">{{item.productName}}</h1>
+          </a>
+          <p class="card-text">{{item.description}}</p>
+          <p class="card-text">Price(In ruppee): {{item.productPrice}}</p>
+          <span class="card-text">Color: {{item.color}}</span>
+          <span class="card-text ms-5">Category : {{item.productCategory}}</span>
         </div>
       </div>
     </div>

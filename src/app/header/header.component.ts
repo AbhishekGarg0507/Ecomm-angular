@@ -54,6 +54,9 @@ export class HeaderComponent implements OnInit {
     this.searchResult = undefined;
   }
   submitSearch(val:string){
-    this.router.navigate([`search/${val}`]);
+    this.router.navigate([`/search/${val}`]);
+  }
+  redirectToDetail(id:number){
+    this.router.navigate([`details/${id}`]);
   }
 }

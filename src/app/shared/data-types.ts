@@ -1,5 +1,15 @@
 export interface sellerSignup{
-    username: string,
+      username: string,
+      phone: number,
+      email: string,
+      zipcode: number,
+      gender: string,
+      address:string,
+      password: string,
+      confirmPassword: string 
+}
+export interface userSignup{
+      username: string,
       phone: number,
       email: string,
       zipcode: number,
@@ -10,6 +20,10 @@ export interface sellerSignup{
 }
 
 export interface sellerLogin{
+  email:string,
+  password:string
+}
+export interface userLogin{
   email:string,
   password:string
 }

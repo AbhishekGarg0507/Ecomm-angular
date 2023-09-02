@@ -1,0 +1,136 @@
+<div class="main">
+    <div class="card mb-3 mx-auto mt-5 form-card " style="max-width: 900px; border:0">
+        <div class="row g-0">
+          
+          <div class="col-md-12">
+            <div class="card-body" *ngIf="showloginForm">
+            <h2 class="card-title mb-3 text-center">REGISTER USER</h2> 
+            <div class="my-4 hr-color">
+                <hr>
+            </div>
+            <div class="text-white bg-danger errMsg rounded my-3" *ngIf="!sellerForm.valid && sellerForm.touched">* is a required field</div>
+              <!--  -->
+            <form (ngSubmit)="Signup(sellerForm.value)" #sellerForm="ngForm">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <B>USERNAME</B>
+                    <div class=" form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInputUser" placeholder="Username" name="username" ngModel required>
+                    <label for="floatingInputUser">Username*</label>
+                    </div>
+    
+                    <B>PHONE</B>
+                    <div class=" form-floating">
+                    <input type="number" class="form-control" id="floatingInputPhone" placeholder="phone" name="phone" ngModel required >
+                    <label for="floatingInputPhone">Phone number*</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                        <B>EMAIL</B>
+                        <div class=" form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInputEmail" placeholder="name@example.com" name="email" ngModel required email>
+                        <label for="floatingInputEmail">Email*</label>
+                        </div>
+    
+                        <B>ZIPCODE</B>
+                        <div class="form-floating">
+                        <input type="number" class="form-control" id="floatingInputZip" placeholder="Zipcode" name="zipcode" ngModel required>
+                        <label for="floatingInputZip">Zipcode*</label>
+                        </div>
+                </div>
+                <div class="mt-3">
+                    <p><B>GENDER</B></p>
+                    <span class="radio" *ngFor="let gender of genders">
+                        <input type="radio" name="gender" ngModel [value]="gender"required> {{gender}}
+                    </span>
+                </div>
+            </div>
+                <!--  -->
+            <div class="mb-3">
+                <B>ADDRESS</B>
+                <div class=" form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInputAddress" placeholder="Address" name="address" ngModel required>
+                    <label for="floatingInputAddress">Address*</label>
+                </div>
+            </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <B>PASSWORD</B>
+                        <div class=" form-floating mb-3">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="passwrod" name="password" ngModel required>
+                        <label for="floatingPassword">Password*</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <B>CONFIRM PASSWORD</B>
+                        <div class=" form-floating mb-3">
+                        <input type="password" class="form-control" id="floatingConPassword" placeholder="Confirm Password" name="confirmPassword" ngModel required>
+                        <label for="floatingConPassword">Confirm Password*</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-3 d-grid">
+                    <button type="submit" class="btn myButton" >Submit</button>
+                </div>    
+            </form>
+            <div class="text-center">
+                <p>Already a Member !!! <a class="form-link ms-1" (click)="openLogin()">Login</a></p>
+            </div>
+              <!--  -->
+            </div>
+    
+            <!-- LOgin Form -->
+            <div class="card-body" *ngIf="!showloginForm">
+                <h2 class="card-title mb-3 text-center">USER LOGIN</h2>  
+                <div class="my-4 hr-color">
+                    <hr>
+                </div>
+                <div class="text-white bg-danger errMsg rounded my-3" *ngIf="AuthError">
+                    <span >Email or Password is Empty or Invalid !!</span>
+                </div>
+                
+                <form (ngSubmit)="Login(userLogin.value)" #userLogin="ngForm">
+                    
+                  <B>EMAIL</B>
+                  <div class=" form-floating mb-3">
+                      <input type="text" 
+                             class="form-control" 
+                             id="floatingInput" 
+                             placeholder="name@example.com"
+                             name="email"
+                             ngModel required #email="ngModel">
+                      <label for="floatingInput">Email</label>
+                      
+                  </div>
+                  
+      
+                  <B>PASSWORD</B>
+                  <div class="form-floating mb-3">
+                      <input type="password" 
+                             class="form-control" 
+                             id="floatingPassword" 
+                             placeholder="Password" 
+                             name="password" 
+                             ngModel required #email="ngModel">
+                      <label for="floatingPassword">Password</label>
+                      
+                  </div>
+                  
+      
+                  <div class="mb-3 d-grid">
+                      <button type="submit" class="btn myButton" >Login</button>
+                  </div>
+    
+                  <div class="col-md-12 text-center">
+                    <p class="">Not a Member! <a class="form-link ms-1" (click)="openSignup()">SignUp</a></p>
+                  </div>  
+                </form>
+              </div>
+    
+          </div>
+        </div>
+    
+        
+      </div>
+</div>
