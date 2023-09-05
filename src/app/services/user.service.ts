@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { userSignup } from '../shared/data-types';
+import { userLogin, userSignup } from '../shared/data-types';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
@@ -17,8 +17,27 @@ export class UserService {
         localStorage.setItem('user',JSON.stringify(result.body));
         this.router.navigate(['/']);
       }
-      
     })
     
+  }
+
+  userlogin(data:userLogin){
+    console.log(data);
+    this.http
+    .get(`http://localhost:3000/users?email=${data.email}&password=${data.password}`,
+    {observe:'response'})
+    .subscribe((result:any)=>{
+      if(result && result.body){
+        localStorage.setItem('user',JSON.stringify(result.body[0]));
+        this.router.navigate(['/']);
+      }
+    })
+    
+  }
+
+  userAuthReload(){
+    if(localStorage.getItem('user')){
+      this.router.navigate(['/']);
+    }
   }
 }

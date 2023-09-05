@@ -30,6 +30,24 @@
         </li>
         <span class="cartCount">0</span>
       </ul>
+      <ul class="navbar-nav nav-bar-item mr-auto mt-2  ms-auto me-5 " *ngSwitchCase="'user'">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/seller-auth"  routerLinkActive="Active">Seller</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="Active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/user-auth"  routerLinkActive="Active">{{userName}}</a>
+        </li>
+        <li class="nav-item" >
+            <a class="nav-link"><mat-icon >shopping_cart</mat-icon> </a>
+        </li>
+        <span class="cartCount">0</span>
+        <li class="nav-item" style="margin-top: 5px; margin-left: 8px;">
+          <a (click)="userlogout()"><mat-icon>exit_to_app</mat-icon></a>
+        </li>
+      </ul>
       <!-- switch the navbar for seller-auth case -->
       <ul class="navbar-nav nav-bar-item mr-auto mt-2  ms-auto me-5 " *ngSwitchCase="'seller'">
         <li class="nav-item">
@@ -42,7 +60,7 @@
           <a class="nav-link">{{sellerName | titlecase}}</a>
         </li>
         <li class="nav-item" style="margin-top: 5px;">
-            <a (click)="logout()"><mat-icon>exit_to_app</mat-icon></a>
+            <a (click)="selerlogout()"><mat-icon>exit_to_app</mat-icon></a>
         </li>
       </ul>
 

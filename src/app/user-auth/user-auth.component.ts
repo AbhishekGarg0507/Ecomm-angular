@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { userLogin, userSignup } from '../shared/data-types';
 import { UserService } from '../services/user.service';
 
@@ -7,22 +7,25 @@ import { UserService } from '../services/user.service';
   templateUrl: './user-auth.component.html',
   styleUrls: ['./user-auth.component.css']
 })
-export class UserAuthComponent {
+export class UserAuthComponent implements OnInit{
   genders = ['Male','Female'];
   showloginForm:boolean = false;
   AuthError:string = "";
 
   constructor(private userservice:UserService){}
 
+  ngOnInit(): void {
+    this.userservice.userAuthReload();
+  }
+
   Signup(form:userSignup){
     this.userservice.newUser(form);
-    // console.warn(form);
-    
   }
+
   Login(val:userLogin){
-    console.error(val);
-    
+    this.userservice.userlogin(val);
   }
+
   openLogin(){
     this.showloginForm = false;
   }

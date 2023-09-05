@@ -11,6 +11,7 @@ import { ProductService } from '../services/product.service';
 export class HeaderComponent implements OnInit {
   menuType:string = 'default';
   sellerName:string = '';
+  userName:string = '';
   searchResult:undefined|product[];
   constructor(private router : Router,private product:ProductService){}
   ngOnInit(): void {
@@ -27,17 +28,28 @@ export class HeaderComponent implements OnInit {
             
             this.sellerName = sellerData.username ;
           }
-        }else{
+          }else if(localStorage.getItem('user')){
+            let userStore = localStorage.getItem('user');
+            let userData = userStore && JSON.parse(userStore);
+            this.userName = userData.username;
+            this.menuType = 'user';
+        }
+        else{
           this.menuType = 'default';
         }
       }
     })
   }
 
-  logout(){
+  selerlogout(){
     localStorage.removeItem('seller');
     this.router.navigate(['/']);
   }
+  userlogout(){
+    localStorage.removeItem('user');
+    this.router.navigate(['/']);
+  }
+  
 
   searchProduct(query:KeyboardEvent){
     if(query){

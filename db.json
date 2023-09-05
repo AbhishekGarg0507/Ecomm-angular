@@ -119,6 +119,28 @@
       "confirmPassword": "123456",
       "gender": "Male",
       "id": 2
+    },
+    {
+      "username": "Demo",
+      "phone": 1234567890,
+      "email": "demo@user.com",
+      "zipcode": 123456,
+      "address": "chekka haryan",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "gender": "Male",
+      "id": 3
+    },
+    {
+      "username": "Remo",
+      "phone": 1234567890,
+      "email": "remo@user.com",
+      "zipcode": 123456,
+      "address": "UK",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "gender": "Male",
+      "id": 4
     }
   ]
 }
