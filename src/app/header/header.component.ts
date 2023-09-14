@@ -45,10 +45,11 @@ export class HeaderComponent implements OnInit {
     let cartData = localStorage.getItem('localCart');
     if(cartData){
       this.cartItems = JSON.parse(cartData).length;
+      this.product.cartData.subscribe((items) =>{
+        this.cartItems = items.length;
+      })
     } 
-    this.product.cartData.subscribe((items) =>{
-      this.cartItems = items.length;
-    })
+    
   }
 
   selerlogout(){
@@ -58,6 +59,7 @@ export class HeaderComponent implements OnInit {
   userlogout(){
     localStorage.removeItem('user');
     this.router.navigate(['/']);
+    this.product.cartData.emit([]);
   }
   
 

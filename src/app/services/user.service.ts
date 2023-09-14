@@ -28,9 +28,9 @@ export class UserService {
     {observe:'response'})
     .subscribe((result:any)=>{
       if(result && result.body?.length){
-        this.invalidUserAuth.emit(false);
         localStorage.setItem('user',JSON.stringify(result.body[0]));
         this.router.navigate(['/']);
+        this.invalidUserAuth.emit(false);
       }else{
         this.invalidUserAuth.emit(true);
       }
