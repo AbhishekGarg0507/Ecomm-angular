@@ -11,6 +11,7 @@ import { product } from '../shared/data-types';
 export class ProductDetailsComponent implements OnInit{
   detailProduct:undefined | product ;
   productQuantity:number = 1;
+  removeCart = false;
   constructor(private activeRoute:ActivatedRoute, private productsrvice:ProductService){}
   ngOnInit(): void {
     let id = this.activeRoute.snapshot.paramMap.get('productId');
@@ -18,6 +19,17 @@ export class ProductDetailsComponent implements OnInit{
     id && this.productsrvice.getProduct(id).subscribe((result)=>{
       // console.error(result);
       this.detailProduct = result;
+
+      let cartData = localStorage.getItem('localCart');
+      if(id && cartData){
+        let items = JSON.parse(cartData);
+        items = items.filter((item:product) => id == item.id.toString())
+        if(items.length){
+          this.removeCart = true;
+        }else{
+          this.removeCart = false;
+        }
+      }
     })
     
     
@@ -35,12 +47,16 @@ export class ProductDetailsComponent implements OnInit{
     if(this.detailProduct){
       this.detailProduct.quantity = this.productQuantity;
       // console.log(this.detailProduct);
-      
       if(!localStorage.getItem('user')){
         console.log(this.detailProduct);
         this.productsrvice.localAddToCart(this.detailProduct);
+        this.removeCart = true;
       }
     }
+  }
+  removeFromCart(productId:number){
+    this.productsrvice.removeItemFromCart(productId);
+    this.removeCart = false;
   }
   
 }
