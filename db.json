@@ -155,6 +155,42 @@
       "productId": 3,
       "userId": 1,
       "id": 1
+    },
+    {
+      "productName": "Iphone 14 pro",
+      "productPrice": 15000,
+      "productCategory": "Mobile",
+      "color": "Purple",
+      "description": "A apple product.",
+      "image": "https://www.apple.com/v/iphone-14-pro/e/images/meta/iphone-14-pro_overview__3dn6st99cpea_og.png",
+      "quantity": 1,
+      "productId": 1,
+      "userId": null,
+      "id": 2
+    },
+    {
+      "productCategory": "Home-Appliance",
+      "productName": "Refrigerator with Water Dispenser",
+      "productPrice": 48990,
+      "color": "Grey",
+      "description": "MarQ by Flipkart 560 L Frost Free Side by Side Refrigerator with Water Dispenser  (Silver, Grey, SBS-560W)",
+      "image": "https://rukminim1.flixcart.com/image/416/416/jwkzwy80/refrigerator-new/u/h/k/sbs-560w-na-marq-by-flipkart-original-imafh8mfjsc9maqv.jpeg?q=70",
+      "quantity": 1,
+      "productId": 2,
+      "userId": 2,
+      "id": 3
+    },
+    {
+      "productCategory": "Home-Appliance",
+      "productName": "Refrigerator with Water Dispenser",
+      "productPrice": 48990,
+      "color": "Grey",
+      "description": "MarQ by Flipkart 560 L Frost Free Side by Side Refrigerator with Water Dispenser  (Silver, Grey, SBS-560W)",
+      "image": "https://rukminim1.flixcart.com/image/416/416/jwkzwy80/refrigerator-new/u/h/k/sbs-560w-na-marq-by-flipkart-original-imafh8mfjsc9maqv.jpeg?q=70",
+      "quantity": 1,
+      "productId": 2,
+      "userId": 2,
+      "id": 4
     }
   ]
 }

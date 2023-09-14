@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { userLogin, userSignup } from '../shared/data-types';
+import { cart, product, userLogin, userSignup } from '../shared/data-types';
 import { UserService } from '../services/user.service';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-user-auth',
@@ -12,7 +13,7 @@ export class UserAuthComponent implements OnInit{
   showloginForm:boolean = false;
   AuthError:string = "";
 
-  constructor(private userservice:UserService){}
+  constructor(private userservice:UserService, private product:ProductService){}
 
   ngOnInit(): void {
     this.userservice.userAuthReload();
@@ -22,8 +23,16 @@ export class UserAuthComponent implements OnInit{
     this.userservice.newUser(form);
   }
 
-  Login(val:userLogin){
-    this.userservice.userlogin(val);
+  Login(data:userLogin){
+    this.userservice.userlogin(data);
+    this.userservice.invalidUserAuth.subscribe((result)=>{
+      // console.warn("login result" , result);
+      if(result){
+        this.AuthError = "Please enter valid user details";
+      }else{
+        this.localCartToRemoteCart();
+      }
+    })
   }
 
   openLogin(){
@@ -31,5 +40,40 @@ export class UserAuthComponent implements OnInit{
   }
   openSignup(){
     this.showloginForm = true;
+  }
+
+  localCartToRemoteCart(){
+    let data = localStorage.getItem('localCart');
+    if(data){
+      let cartDataList:product[] = JSON.parse(data);
+      let user = localStorage.getItem('user');
+      let userId= user && JSON.parse(user).id;
+      console.log(userId);
+      
+      cartDataList.forEach((product:product,index) => {
+        let cartData:cart = {
+          ...product,
+          productId:product.id,
+          userId
+        };
+
+        delete cartData.id;
+
+        setTimeout(() => {
+          this.product.addToCart(cartData).subscribe((result)=>{
+            if(result){
+              console.warn("item stored in DB");
+            }
+          })
+          if(cartDataList.length === index+1){
+            localStorage.removeItem('localCart');
+          }
+
+        }, 500);
+        
+
+
+      });
+    }
   }
 }

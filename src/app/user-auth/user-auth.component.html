@@ -86,8 +86,8 @@
                 <div class="my-4 hr-color">
                     <hr>
                 </div>
-                <div class="text-white bg-danger errMsg rounded my-3" *ngIf="AuthError">
-                    <span >Email or Password is Empty or Invalid !!</span>
+                <div class="text-white bg-danger errMsg rounded my-3 p-2" *ngIf="AuthError">
+                    <span >{{AuthError}}</span>
                 </div>
                 
                 <form (ngSubmit)="Login(userLogin.value)" #userLogin="ngForm">
