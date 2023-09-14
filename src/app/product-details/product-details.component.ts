@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../services/product.service';
-import { product } from '../shared/data-types';
+import { cart, product } from '../shared/data-types';
 
 @Component({
   selector: 'app-product-details',
@@ -13,6 +13,7 @@ export class ProductDetailsComponent implements OnInit{
   productQuantity:number = 1;
   removeCart = false;
   constructor(private activeRoute:ActivatedRoute, private productsrvice:ProductService){}
+  
   ngOnInit(): void {
     let id = this.activeRoute.snapshot.paramMap.get('productId');
     // console.warn(id);
@@ -51,6 +52,26 @@ export class ProductDetailsComponent implements OnInit{
         console.log(this.detailProduct);
         this.productsrvice.localAddToCart(this.detailProduct);
         this.removeCart = true;
+      }else{
+        // console.warn('user is logged in');
+        let user = localStorage.getItem('user');
+        let userId = user && JSON.parse(user).id;
+        // console.warn(userId);
+        let cartData:cart = {
+          ...this.detailProduct,
+          productId:this.detailProduct.id,
+          userId
+        }
+        delete cartData.id;
+        // console.warn(cartData);
+        this.productsrvice.addToCart(cartData).subscribe((result)=>{
+          if(result){
+              alert("product is added to cart");
+          }
+          
+        });
+        
+        
       }
     }
   }

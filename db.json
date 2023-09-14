@@ -142,5 +142,19 @@
       "gender": "Male",
       "id": 4
     }
+  ],
+  "cart": [
+    {
+      "productName": "SAMSUNG 225 L",
+      "productPrice": "20190",
+      "productCategory": "Home-Appliance",
+      "color": "Darkgreen",
+      "description": "Direct Cool Single Door 4 Star Refrigerator with Base Drawer with Digi Touch Cool, BSD  (Paradise BLUE, RR23A2F3X9U/HL)",
+      "image": "https://rukminim1.flixcart.com/image/416/416/l3xcr680/refrigerator-new/e/p/4/-original-imageyygyp5yg9fz.jpeg?q=70",
+      "quantity": 1,
+      "productId": 3,
+      "userId": 1,
+      "id": 1
+    }
   ]
 }
