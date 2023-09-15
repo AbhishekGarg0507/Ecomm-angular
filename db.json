@@ -191,6 +191,30 @@
       "productId": 1,
       "userId": 2,
       "id": 8
+    },
+    {
+      "productName": "V-Guard VKS15",
+      "productPrice": 720,
+      "productCategory": "Home-Appliance",
+      "color": "Grey",
+      "description": "Stainless Steel 1500 W Electric Kettle  (1.5 L, Steel-Black)",
+      "image": "https://rukminim1.flixcart.com/image/416/416/l572ufk0/electric-kettle/m/9/3/vks15-vks15-stainless-steel-1500-w-v-guard-original-imagfxfxjvwwddvy.jpeg?q=70",
+      "quantity": 10,
+      "productId": 6,
+      "userId": 3,
+      "id": 9
+    },
+    {
+      "productName": "Iphone 14 pro",
+      "productPrice": 15000,
+      "productCategory": "Mobile",
+      "color": "Purple",
+      "description": "A apple product.",
+      "image": "https://www.apple.com/v/iphone-14-pro/e/images/meta/iphone-14-pro_overview__3dn6st99cpea_og.png",
+      "quantity": 1,
+      "productId": 1,
+      "userId": 3,
+      "id": 10
     }
   ]
 }

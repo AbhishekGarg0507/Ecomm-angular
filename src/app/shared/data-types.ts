@@ -52,3 +52,11 @@ export interface cart{
   userId:number,
   productId:number
 }
+
+export interface priceSummary{
+  subtotal:number,
+  tax:number,
+  discount:number,
+  delivery:number,
+  total:number
+}
