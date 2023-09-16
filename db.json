@@ -145,18 +145,6 @@
   ],
   "cart": [
     {
-      "productName": "SAMSUNG 225 L",
-      "productPrice": "20190",
-      "productCategory": "Home-Appliance",
-      "color": "Darkgreen",
-      "description": "Direct Cool Single Door 4 Star Refrigerator with Base Drawer with Digi Touch Cool, BSD  (Paradise BLUE, RR23A2F3X9U/HL)",
-      "image": "https://rukminim1.flixcart.com/image/416/416/l3xcr680/refrigerator-new/e/p/4/-original-imageyygyp5yg9fz.jpeg?q=70",
-      "quantity": 1,
-      "productId": 3,
-      "userId": 1,
-      "id": 1
-    },
-    {
       "productCategory": "Home-Appliance",
       "productName": "Refrigerator with Water Dispenser",
       "productPrice": 48990,
@@ -167,30 +155,6 @@
       "productId": 2,
       "userId": 2,
       "id": 2
-    },
-    {
-      "productName": "Iphone 14 pro",
-      "productPrice": 15000,
-      "productCategory": "Mobile",
-      "color": "Purple",
-      "description": "A apple product.",
-      "image": "https://www.apple.com/v/iphone-14-pro/e/images/meta/iphone-14-pro_overview__3dn6st99cpea_og.png",
-      "quantity": 1,
-      "productId": 1,
-      "userId": 1,
-      "id": 7
-    },
-    {
-      "productName": "Iphone 14 pro",
-      "productPrice": 15000,
-      "productCategory": "Mobile",
-      "color": "Purple",
-      "description": "A apple product.",
-      "image": "https://www.apple.com/v/iphone-14-pro/e/images/meta/iphone-14-pro_overview__3dn6st99cpea_og.png",
-      "quantity": 1,
-      "productId": 1,
-      "userId": 2,
-      "id": 8
     },
     {
       "productName": "V-Guard VKS15",
@@ -215,6 +179,44 @@
       "productId": 1,
       "userId": 3,
       "id": 10
+    },
+    {
+      "productName": "SAMSUNG 225 L",
+      "productPrice": "20190",
+      "productCategory": "Home-Appliance",
+      "color": "Darkgreen",
+      "description": "Direct Cool Single Door 4 Star Refrigerator with Base Drawer with Digi Touch Cool, BSD  (Paradise BLUE, RR23A2F3X9U/HL)",
+      "image": "https://rukminim1.flixcart.com/image/416/416/l3xcr680/refrigerator-new/e/p/4/-original-imageyygyp5yg9fz.jpeg?q=70",
+      "quantity": 1,
+      "productId": 3,
+      "userId": 2,
+      "id": 11
+    },
+    {
+      "productName": "V-Guard VKS15",
+      "productPrice": 720,
+      "productCategory": "Home-Appliance",
+      "color": "Grey",
+      "description": "Stainless Steel 1500 W Electric Kettle  (1.5 L, Steel-Black)",
+      "image": "https://rukminim1.flixcart.com/image/416/416/l572ufk0/electric-kettle/m/9/3/vks15-vks15-stainless-steel-1500-w-v-guard-original-imagfxfxjvwwddvy.jpeg?q=70",
+      "quantity": 2,
+      "productId": 6,
+      "userId": 2,
+      "id": 12
+    }
+  ],
+  "orders": [
+    {
+      "name": "Abhi",
+      "email": "abhi@user.com",
+      "phone": 1234567890,
+      "address": "Street no.8, #4554 , near High school , ajad nagar",
+      "country": "India",
+      "city": "Cheeka",
+      "zipcode": 123456,
+      "totalPrice": 85964,
+      "userId": 1,
+      "id": 1
     }
   ]
 }

@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-light navbar-full fixed-top ">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-full fixed-top ">
     <a class="navbar-brand mx-5 nav-logo" routerLink="/">The Store</a>
    
-    <form class="form nav-search my-2 mt-2" *ngIf="menuType === 'default'">
+    <form class="form nav-search my-2 mt-2" *ngIf="menuType !== 'seller'">
         <input class="form-control" type="search" placeholder="Search for Products" #searchBox (keyup)="searchProduct($event)" (blur)="emptySearch()" >
         <button class="btn btn-outline-success my-2 my-sm-0" (click)="submitSearch(searchBox.value)">Search</button>
         <ul class="search-result" *ngIf="searchResult">
@@ -26,17 +26,21 @@
           <a class="nav-link" routerLink="/user-auth">Login/signup</a>
         </li>
         <li class="nav-item" >
-            <a class="nav-link"><mat-icon >shopping_cart</mat-icon> </a>
+            <a class="nav-link" [routerLink]="cartItems>0?'cart-page':null " ><mat-icon >shopping_cart</mat-icon> </a>
         </li>
         <span class="cartCount">{{cartItems}}</span>
       </ul>
       <ul class="navbar-nav nav-bar-item mr-auto mt-2  ms-auto me-5 " *ngSwitchCase="'user'">
         <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="Active">Home</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" routerLink="/seller-auth"  routerLinkActive="Active">Seller</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/" routerLinkActive="Active">Home</a>
+          <a class="nav-link" routerLink="/my-orders"  routerLinkActive="Active">MyOrders</a>
         </li>
+        
         <li class="nav-item">
           <a class="nav-link" routerLink="/user-auth"  routerLinkActive="Active">{{userName}}</a>
         </li>

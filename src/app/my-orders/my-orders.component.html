@@ -1,0 +1,62 @@
+
+<div class="container" style="margin-top: 6%;">
+    <h2>MY ORDERS</h2>
+<div class="card">
+<div class="card-body">
+<div class="row">
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="table-responsive px-3">
+                            <table class="table table-striped align-middle table-nowrap">
+                                <tHead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Order Id</th>
+                                        <th>Status</th>
+                                        <th>Price</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </tHead>
+                                <tbody *ngFor="let item of orderData">
+                                    <tr>
+                                        <td>
+                                            <div class="me-4" style="width: 100px;">
+                                                <img src="https://www.bootdey.com/image/380x380/00FFFF/000000" class="img-fluid rounded" alt="">
+                                            </div>
+                                        </td>
+
+                                        <td class="table-alignment">
+                                            <div>
+                                                <h3><a href="ecommerce-product-detail.html" class="text-dark nav-link pt-2"># {{item.id}}</a></h3>
+                                            </div>
+                                        </td>
+
+                                        <td class="table-alignment">
+                                            <span class="rounded-5 p-1 bg-warning" style=" color: white; font-size: 12px;"> In Progress </span><br>
+                                            <span class="rounded-5 p-1 bg-danger" style=" color: white; font-size: 12px;"> Canceled </span><br>
+                                            <span class="rounded-5 p-1 bg-success" style=" color: white; font-size: 12px;"> Delivered </span>
+                                        </td>
+
+                                        <td class="table-alignment">
+                                            <h3 class="mb-0 "><b>&#8377;{{item.totalPrice}}</b></h3>
+                                        </td>
+
+                                        <td class="table-alignment">
+                                            <div class="d-flex">
+                                                <button type="button" class="btn btn-primary waves-effect waves-light me-2"> View </button>
+                                                <button type="button" (click)="cancelOrder(item.id)" class="btn btn-primary waves-effect waves-light me-2"> Cancel </button>    
+                                            </div>
+                                        </td>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>

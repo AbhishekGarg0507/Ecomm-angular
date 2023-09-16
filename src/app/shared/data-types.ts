@@ -60,3 +60,26 @@ export interface priceSummary{
   delivery:number,
   total:number
 }
+
+export interface billingInfo{
+  name:string,
+  email:string,
+  address:string, 
+  city:string, 
+  country:string,
+  phone:number, 
+  zipcode:number
+}
+
+export interface order{
+  name:string,
+  email:string,
+  address:string, 
+  city:string, 
+  country:string,
+  phone:number, 
+  zipcode:number,
+  totalPrice:number,
+  userId:number,
+  id:number | undefined
+}

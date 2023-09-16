@@ -1,17 +1,13 @@
-import { priceSummary } from './../shared/data-types';
 import { Component, OnInit } from '@angular/core';
+import { cart, order, priceSummary } from '../shared/data-types';
 import { ProductService } from '../services/product.service';
-import { cart } from '../shared/data-types';
-import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-cart-page',
-  templateUrl: './cart-page.component.html',
-  styleUrls: ['./cart-page.component.css']
+  selector: 'app-order-details',
+  templateUrl: './order-details.component.html',
+  styleUrls: ['./order-details.component.css']
 })
-export class CartPageComponent implements OnInit{
-  cartData:cart[] | undefined ;
-
+export class OrderDetailsComponent implements OnInit {
   priceSummary:priceSummary = {
     subtotal:0,
     tax:0,
@@ -19,19 +15,24 @@ export class CartPageComponent implements OnInit{
     delivery:0,
     total:0
   };
+  cartData:cart[] | undefined ;
   cartItems:number = 0;
-  constructor(private product:ProductService,
-    private router:Router){}
+  orderData:order[]|undefined ;
+  constructor(private product:ProductService){}
+
   ngOnInit(): void {
+      
+    this.product.orderList().subscribe((result)=>{
+      this.orderData= result;
+    })
     this.product.currentCart().subscribe((result)=>{
       this.cartData = result;
-
       this.cartItems = this.cartData.length;
       
       let price = 0;
       result.forEach((item)=>{
         if(item.quantity){
-          price = price + (+item.productPrice * +item.quantity) ;
+          price = price+ (+item.productPrice * +item.quantity) ;
         }
       });
       this.priceSummary.subtotal = price;
@@ -41,10 +42,6 @@ export class CartPageComponent implements OnInit{
       this.priceSummary.delivery = 100;
       this.priceSummary.total = price + Tax + 100 - (price/10);
       
-    });
-  }
-
-  checkout(){
-    this.router.navigate(['checkout']);
+    })
   }
 }
