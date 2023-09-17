@@ -94,7 +94,9 @@ export class ProductService {
     return this.http.post('http://localhost:3000/orders',data);
 
   }
-
+  order(orderId:number){
+    return this.http.get('http://localhost:3000/orders/'+orderId)
+  }
   orderList(){
     let userStore = localStorage.getItem('user');
     let userData = userStore && JSON.parse(userStore);

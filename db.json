@@ -143,80 +143,33 @@
       "id": 4
     }
   ],
-  "cart": [
-    {
-      "productCategory": "Home-Appliance",
-      "productName": "Refrigerator with Water Dispenser",
-      "productPrice": 48990,
-      "color": "Grey",
-      "description": "MarQ by Flipkart 560 L Frost Free Side by Side Refrigerator with Water Dispenser  (Silver, Grey, SBS-560W)",
-      "image": "https://rukminim1.flixcart.com/image/416/416/jwkzwy80/refrigerator-new/u/h/k/sbs-560w-na-marq-by-flipkart-original-imafh8mfjsc9maqv.jpeg?q=70",
-      "quantity": 1,
-      "productId": 2,
-      "userId": 2,
-      "id": 2
-    },
-    {
-      "productName": "V-Guard VKS15",
-      "productPrice": 720,
-      "productCategory": "Home-Appliance",
-      "color": "Grey",
-      "description": "Stainless Steel 1500 W Electric Kettle  (1.5 L, Steel-Black)",
-      "image": "https://rukminim1.flixcart.com/image/416/416/l572ufk0/electric-kettle/m/9/3/vks15-vks15-stainless-steel-1500-w-v-guard-original-imagfxfxjvwwddvy.jpeg?q=70",
-      "quantity": 10,
-      "productId": 6,
-      "userId": 3,
-      "id": 9
-    },
-    {
-      "productName": "Iphone 14 pro",
-      "productPrice": 15000,
-      "productCategory": "Mobile",
-      "color": "Purple",
-      "description": "A apple product.",
-      "image": "https://www.apple.com/v/iphone-14-pro/e/images/meta/iphone-14-pro_overview__3dn6st99cpea_og.png",
-      "quantity": 1,
-      "productId": 1,
-      "userId": 3,
-      "id": 10
-    },
-    {
-      "productName": "SAMSUNG 225 L",
-      "productPrice": "20190",
-      "productCategory": "Home-Appliance",
-      "color": "Darkgreen",
-      "description": "Direct Cool Single Door 4 Star Refrigerator with Base Drawer with Digi Touch Cool, BSD  (Paradise BLUE, RR23A2F3X9U/HL)",
-      "image": "https://rukminim1.flixcart.com/image/416/416/l3xcr680/refrigerator-new/e/p/4/-original-imageyygyp5yg9fz.jpeg?q=70",
-      "quantity": 1,
-      "productId": 3,
-      "userId": 2,
-      "id": 11
-    },
-    {
-      "productName": "V-Guard VKS15",
-      "productPrice": 720,
-      "productCategory": "Home-Appliance",
-      "color": "Grey",
-      "description": "Stainless Steel 1500 W Electric Kettle  (1.5 L, Steel-Black)",
-      "image": "https://rukminim1.flixcart.com/image/416/416/l572ufk0/electric-kettle/m/9/3/vks15-vks15-stainless-steel-1500-w-v-guard-original-imagfxfxjvwwddvy.jpeg?q=70",
-      "quantity": 2,
-      "productId": 6,
-      "userId": 2,
-      "id": 12
-    }
-  ],
+  "cart": [],
   "orders": [
     {
-      "name": "Abhi",
-      "email": "abhi@user.com",
-      "phone": 1234567890,
-      "address": "Street no.8, #4554 , near High school , ajad nagar",
+      "name": "Abhishek Garg",
+      "email": "abhishek@user.com",
+      "phone": 8950145060,
+      "address": "dsgvsdbfdanbdfn",
       "country": "India",
-      "city": "Cheeka",
-      "zipcode": 123456,
-      "totalPrice": 85964,
-      "userId": 1,
+      "city": "kkr",
+      "zipcode": 789456,
+      "totalPrice": 15400,
+      "subtotal": 15000,
+      "userId": 2,
       "id": 1
+    },
+    {
+      "name": "demo",
+      "email": "demo@user.com",
+      "phone": 123456,
+      "address": "Cloud",
+      "country": "India",
+      "city": "Himachal",
+      "zipcode": 123467,
+      "totalPrice": 22744,
+      "subtotal": 22200,
+      "userId": 3,
+      "id": 2
     }
   ]
 }

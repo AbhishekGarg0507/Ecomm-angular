@@ -80,6 +80,7 @@ export interface order{
   phone:number, 
   zipcode:number,
   totalPrice:number,
+  subtotal:number,
   userId:number,
   id:number | undefined
 }

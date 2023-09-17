@@ -52,6 +52,7 @@ billingDetails(data:billingInfo){
     let orderData:order = {
       ...data,
       totalPrice : this.priceSummary.total,
+      subtotal : this.priceSummary.subtotal,
       userId,
       id:undefined
     }
